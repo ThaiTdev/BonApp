@@ -1,0 +1,13 @@
+.spinner {
+  font-size: 70px;
+  animation: load 2s linear infinite;
+  color: var(--primary);
+  @keyframes load {
+    from {
+      rotate: (0deg);
+    }
+    to {
+      rotate: (360deg);
+    }
+  }
+}

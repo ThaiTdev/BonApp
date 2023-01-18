@@ -1,0 +1,37 @@
+@use "../../assets/styles/mixins" as mixin;
+.header {
+  padding: 10px 20px;
+  box-shadow: var(--box-shadow-nav);
+  color: var(--primary);
+  background-color: white;
+  position: relative;
+  height: 80px;
+  img {
+    width: 130px;
+  }
+  .title {
+    font-size: 50px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: var(--gray-1);
+    span {
+      color: var(--primary);
+    }
+  }
+}
+
+.HeaderList {
+  @include mixin.xs {
+    display: none;
+  }
+}
+.menuBar {
+  cursor: pointer;
+  display: none;
+  transition: opacity 1s;
+  &:hover {
+    opacity: 0.5;
+  }
+  @include mixin.xs {
+    display: block;
+  }
+}
